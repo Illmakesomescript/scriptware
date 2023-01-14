@@ -1,0 +1,128 @@
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "🔆🔆Simple Gui🔆🔆 | Made By ZacharyX#2898", HidePremium = false,IntroEnabled = true, IntroText = "Simple Gui | By Xyzo scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Main1 = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Main1:AddButton({
+	Name = "Fly|ClickOnce",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/DT7NCK1W"))();
+  	end    
+})
+OrionLib:MakeNotification({
+	Name = "Xyzo Hub | 🔆🔆Simple Gui🔆🔆",
+	Content = "Loaded Watch ur head",
+	Image = "rbxassetid://4483345998",
+	Time = 2
+})
+
+Main1:AddButton({
+	Name = "TeleportTool|ClickOnce",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/GuBiX19e"))();
+  	end    
+})
+
+Main1:AddButton({
+	Name = "ESP|ClickOnce",
+	Callback = function()
+        local players = game.Players:GetPlayers()
+
+for i,v in pairs(players) do
+ local esp = Instance.new("Highlight")
+ esp.Name = v.Name
+ esp.FillTransparency = 0
+ esp.FillColor = Color3.new(1, 0.666667, 0)
+ esp.OutlineColor = Color3.new(1, 0.333333, 1)
+ esp.OutlineTransparency = 0
+ esp.Parent = v.Character
+end
+  	end    
+})
+
+local Walkspeed = Main1:AddSlider({
+	Name =  "Walkspeed",
+	Min = 16,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walkspeed",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+	end    
+})
+
+local JumpPower = Main1:AddSlider({
+	Name =  "JumpPower",
+	Min = 16,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "JumpPower",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+	end    
+})
+
+Main1:AddButton({
+	Name = "Inf Jump|ClickOnce",
+	Callback = function()
+        --Subscribe To Spooky Dragon--
+
+local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+  	end    
+})
+
+local Main2 = Window:MakeTab({
+	Name = "PetSimX Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Main2:AddButton({
+	Name = "Project WD",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/NzxEMnf3"))();
+})
+
+Main2:AddButton({
+	Name = "Pearl Gui | Need Key Btw",
+	Callback = function()
+        loadstring(game:HttpGet('https://ppearl.vercel.app'))()
+  	end    
+})
+
+Main2:AddButton({
+	Name = "Milkup Gui",
+	Callback = function()
+        loadstring(game:HttpGet("https://milkup.info/script/PetSimulatorX/"))()
+  	end    
+})
+
+Main2:AddButton({
+	Name = "Milk Hub Gui",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Flxry/Main/MilkyHub/Pet%20Simulator%20X"))()
+  	end    
+})
+
+Main2:AddButton({
+	Name = "Milk Hub Gui",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Flxry/Main/MilkyHub/Pet%20Simulator%20X"))()
+  	end    
+})
